@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "safe-text-to-sql"
+version = "0.1.0"
+description = "Safe text-to-SQL engine with AST validation, read-only enforcement, and row limits over DuckDB"
+authors = [{ name = "Laurence Igbokwe", email = "akaigbokwelaurence@gmail.com" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "duckdb>=1.0.0",
+    "sqlglot>=25.0.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
